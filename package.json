@@ -1,7 +1,7 @@
 {
-    "name": "gas-typescript-template",
+    "name": "slack-newchannel-notification",
     "version": "1.0.0",
-    "description": "Template for using TypeScript with Google Apps Script",
+    "description": "Bot to notify creation of new Slack channels",
     "main": "src/main.ts",
     "scripts": {
         "push": "clasp push",
@@ -10,7 +10,7 @@
         "prettier": "prettier --write src/**/*.ts"
     },
     "author": "Katsunori Kuroda <gh-contact@neko-room.com>",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "devDependencies": {
         "@google/clasp": "^2.4.2",
         "@types/google-apps-script": "^1.0.83",
