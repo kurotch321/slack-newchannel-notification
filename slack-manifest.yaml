@@ -1,0 +1,22 @@
+display_information:
+  name: New Channel Notification
+  description: Celebrate when a new channel is created
+  background_color: "#435078"
+features:
+  bot_user:
+    display_name: New Channel Notification
+    always_online: true
+oauth_config:
+  scopes:
+    bot:
+      - chat:write
+      - users:read
+      - channels:read
+settings:
+  event_subscriptions:
+    request_url: YOUR_GOOGLE_APPS_SCRIPT_URL
+    bot_events:
+      - channel_created
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
