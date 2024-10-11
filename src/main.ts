@@ -13,7 +13,7 @@ function doPost(e: GoogleAppsScript.Events.DoPost) {
 
     // チャンネルIDを取得
     const channel = body.event.channel
-    if (channel.name && channel.creator) {
+    if (channel.id && channel.creator) {
         postMessage(channel)
         return ContentService.createTextOutput('Success')
     } else {
