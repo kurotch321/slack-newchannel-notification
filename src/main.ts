@@ -25,11 +25,11 @@ function doGet(e: GoogleAppsScript.Events.DoGet) {
     return ContentService.createTextOutput('Hello World')
 }
 
-function postMessage(channelData: { channelId: string; creator: string }) {
+function postMessage(channelData: { id: string; creator: string }) {
     const creatorName = getUserInfo(channelData.creator)
     const message = creatorName
-        ? `${creatorName}さんが新しいチャンネル「<#${channelData.channelId}>」を作成しました！ :tada:`
-        : `新しいチャンネル「<#${channelData.channelId}>」が作成されました！ :tada:`
+        ? `${creatorName}さんが新しいチャンネル「<#${channelData.id}>」を作成しました！ :tada:`
+        : `新しいチャンネル「<#${channelData.id}>」が作成されました！ :tada:`
     UrlFetchApp.fetch('https://slack.com/api/chat.postMessage', {
         method: 'post',
         contentType: 'application/json',
