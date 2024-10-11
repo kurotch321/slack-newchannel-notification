@@ -20,6 +20,10 @@ function doPost(e: GoogleAppsScript.Events.DoPost) {
     }
 }
 
+function doGet(e: GoogleAppsScript.Events.DoGet) {
+    return ContentService.createTextOutput('Hello World')
+}
+
 function postMessage(channelData: { channelId: string; creator: string }) {
     const creatorName = getUserInfo(channelData.creator)
     const message = creatorName
